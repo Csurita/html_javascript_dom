@@ -3,4 +3,34 @@
     THE TITLE OF YOUR WEBPAGE
   </h1>
   <div id="container"></div>
+  <script>
+    //begin selection of the class here that we want to target
+    const container = document.querySelector('#container');
+    
+    const paragraph = document.createElement('p');
+    paragraph.textContent = "Hey, I'm red!";
+    paragraph.style.color = "red";
+
+    const smolHeader = document.createElement('h3');
+    smolHeader.textContent = "and I'm a smol blue h3!";
+    smolHeader.style.color = "blue";
+
+    //from here on will be a div inside the initial div
+    const innerDiv = document.createElement('div');
+    innerDiv.style.backgroundColor = "pink";
+    innerDiv.style.border = "black";
+
+    const bigHeader = document.createElement('h1');
+    bigHeader.textContent = "I'm in a div!"
+    
+    const innerParagraph = document.createElement('p');
+    innerParagraph.textContent = "Me too!"
+
+    innerDiv.appendChild(bigHeader);
+    innerDiv.appendChild(innerParagraph);
+    //Putting a comment to separate the appending of children to each element more clearly
+    container.appendChild(innerDiv);
+    container.appendChild(paragraph);
+    container.appendChild(smolHeader);
+  </script>
 </body>
